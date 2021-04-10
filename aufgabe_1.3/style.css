@@ -46,6 +46,18 @@ div.eingerahmt {
     border: 0.3em solid black;
     margin: none;  
 }
+.icons {
+    height: 2em;
+    background-image: url(./Datein/instagram.png);
+    background-repeat: no-repeat;
+}
+.icons a {
+    opacity: 0%;
+}
+.icons a:hover {
+    opacity: 100%;
+    color: black;
+}
 .icons:hover {
     transform: rotate(20deg);
 }
@@ -110,6 +122,12 @@ h3 {
 }
 #kurzform {
     margin-top: 2.5em;
+}
+#scrolltotop {
+    left: 95%;
+    width: 100%;
+    bottom: 1em;
+    position: fixed;
 }
 h4 {
     font-family: sans-serif;

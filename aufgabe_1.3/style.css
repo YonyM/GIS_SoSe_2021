@@ -1,0 +1,130 @@
+body {
+    background-image: url("./Datein/bg.png");
+}
+
+
+.menu {
+    width: auto;
+    border-style: solid;
+    margin: 1em;
+    padding: 0.9em;
+    position: fixed;
+    right: 1em;
+    top: 1em; 
+}
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+a:hover, a:active {
+    text-decoration: none;
+    color:brown;
+}
+#aktiveseite {
+    font-size: 1.3em;
+    color: brown;
+}
+#logo {
+    display: block;
+    margin: auto;
+}
+
+
+
+main {
+    width: 800px;
+    margin: auto;
+}
+div {
+    width: 800px;
+    margin: auto;
+}
+div.eingerahmt {
+    width: 770px;
+    padding: 10px;
+    border: 0.3em solid black;
+    margin: none;  
+}
+.icons:hover {
+    transform: rotate(20deg);
+}
+.galerie {
+    padding: 15px 12px;
+    width: 30%;
+}
+#portrait {
+    margin: 2.5em;
+    padding: 0.8em;
+    width: 35%;
+    border-style: solid;
+    border-color: cadetblue;
+    float: left;
+}
+.eingabefeld {
+    color: black;
+    border-color: cadetblue;
+    font-size: 1em;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    margin-top: 3em;
+    border-style: solid;
+}
+#senfabgeben {
+    width: 100%;
+    color: black;
+    border-color: cadetblue;
+    font-size: 1em;
+    padding-block-end: 10em;
+    border-style: solid;
+}
+#button {
+    margin-top: 2em;
+    margin-right: 0.5em;
+    margin-bottom: 5em;
+    float: right;
+    font-size: 1.2em;
+    width: 8em;
+    height: 2.5em;
+    background-color: cadetblue;
+    border: solid;
+}
+p {
+    font-family:sans-serif; 
+    font-size:1em;
+    letter-spacing: 0.08em;
+}
+h2 {
+    font-family:sans-serif;
+    font-size:1.7em;
+    text-align: center;
+    letter-spacing: 0.25em;    
+}
+h3 {
+    font-family:sans-serif;
+    font-size:1.2em;
+    text-align: center;
+    letter-spacing: 0.15em;
+    display: inline;
+}
+#kurzform {
+    margin-top: 2.5em;
+}
+h4 {
+    font-family: sans-serif;
+    font-size: 1em;
+    text-align: left;
+    display: inline;
+}
+
+
+footer {
+    width: 800px;
+    margin: auto;
+}
+details {
+    width:fit-content;
+    margin-top: 1em;
+    margin-left: 0.5em;
+}

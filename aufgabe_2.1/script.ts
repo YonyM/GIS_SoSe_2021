@@ -2,13 +2,23 @@
 /* function a1(): void {
     let x: string = "Alles";
     console.log(x); 
-    console.log("Logo!");
+    func1();
+    console.log(x);
+    func2();
+    console.log(x);
+    func3();
 }
 
 a1();
 
 function func1(): void {
+    console.log("Gute!");
+} 
+function func2(): void {
     console.log("Klar?");
+} 
+function func3(): void {
+    console.log("Logo!");
 } */
 
 //Aufgabe 2
@@ -173,10 +183,10 @@ function fizzBuzz2(): void {
     } */  
 //d)
 
-/* schach(10);
+schach(8);
 function schach( brettScale: number): void {
-    for (let i = 0; i < brettScale; i++) {
-        let zeile: string = " ";
+    let zeile: string = "";
+    for (let i = 0; i < brettScale; i++) {  
         for (let j = 0; j < brettScale; j++) {
             if (i % 2) {
                 if (j % 2 == 0) {
@@ -194,10 +204,11 @@ function schach( brettScale: number): void {
                     zeile += "#";   
                 }
             }    
-        }
-        console.log(zeile);
+        }  
+        zeile += "\n";
     }
-} */
+    console.log(zeile);
+} 
 //e) in d) inbegriffen
 
 

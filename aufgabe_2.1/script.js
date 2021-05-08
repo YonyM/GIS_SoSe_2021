@@ -1,25 +1,25 @@
 "use strict";
 //Aufgabe 1
-/* function a1(): void {
-    let x: string = "Alles";
-    console.log(x);
-    func1();
-    console.log(x);
-    func2();
-    console.log(x);
-    func3();
+/*function a1(): void {
+   let x: string = "Alles";
+   console.log(x);
+   func1();
+   console.log(x);
+   func2();
+   console.log(x);
+   func3();
 }
 
 a1();
 
 function func1(): void {
-    console.log("Gute!");
+   console.log("Gute!");
 }
 function func2(): void {
-    console.log("Klar?");
+   console.log("Klar?");
 }
 function func3(): void {
-    console.log("Logo!");
+   console.log("Logo!");
 } */
 //Aufgabe 2
 /* function a2(): void {

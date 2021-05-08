@@ -1,24 +1,24 @@
 //Aufgabe 1
-/* function a1(): void {
-    let x: string = "Alles";
-    console.log(x); 
-    func1();
-    console.log(x);
-    func2();
-    console.log(x);
-    func3();
+/*function a1(): void {
+   let x: string = "Alles";
+   console.log(x); 
+   func1();
+   console.log(x);
+   func2();
+   console.log(x);
+   func3();
 }
 
 a1();
 
 function func1(): void {
-    console.log("Gute!");
+   console.log("Gute!");
 } 
 function func2(): void {
-    console.log("Klar?");
+   console.log("Klar?");
 } 
 function func3(): void {
-    console.log("Logo!");
+   console.log("Logo!");
 } */
 
 //Aufgabe 2
@@ -180,20 +180,20 @@ function fizzBuzz2(): void {
             
         }
         zähler++;
-    } */  
+    } */
 //d)
 
 schach(8);
-function schach( brettScale: number): void {
+function schach(brettScale: number): void {
     let zeile: string = "";
-    for (let i = 0; i < brettScale; i++) {  
+    for (let i = 0; i < brettScale; i++) {
         for (let j = 0; j < brettScale; j++) {
             if (i % 2) {
                 if (j % 2 == 0) {
                     zeile += "#";
                 }
                 else {
-                    zeile += " ";   
+                    zeile += " ";
                 }
             }
             else {
@@ -201,14 +201,14 @@ function schach( brettScale: number): void {
                     zeile += " ";
                 }
                 else {
-                    zeile += "#";   
+                    zeile += "#";
                 }
-            }    
-        }  
+            }
+        }
         zeile += "\n";
     }
     console.log(zeile);
-} 
+}  
 //e) in d) inbegriffen
 
 

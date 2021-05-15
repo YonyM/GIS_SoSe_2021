@@ -1,4 +1,3 @@
-
 let gesamtbildDiv: HTMLDivElement = document.createElement("div");
 document.body.appendChild(gesamtbildDiv);
 

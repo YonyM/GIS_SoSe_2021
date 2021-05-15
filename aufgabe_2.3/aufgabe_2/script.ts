@@ -50,15 +50,14 @@ namespace Klappbuch {
         }
 
     }
+
     ersteKategorie();
-   
     let auswahl: Auswahl = {BildpfadOben: "", BildpfadMitte: "", BildpfadUnten: ""};
 
 
     //ich weiß, dass diese Funktion nicht besonders schön ist, aber ich hab sie einfach nicht anders hinbekommen...
     function auswahlSpeichern(_klick: MouseEvent): void {
                 
-
         for (let i: number = 0; i < alleKategorien.length; i++) {
             for (let j: number = 0; j < alleKategorien[i].optionen.length; j++) {
 
@@ -87,6 +86,7 @@ namespace Klappbuch {
         }
     }
 
+
     function TeilbildLaden(teilbild: Teilbild, kategorieDiv: HTMLDivElement): void {
 
         let bild: HTMLImageElement = document.createElement("img");
@@ -107,8 +107,6 @@ namespace Klappbuch {
             bild.addEventListener("click", abInDenStorage);
         }
     }
-
-
 
 
     function nächsteKategorie(stelle: number): void {
@@ -158,6 +156,7 @@ namespace Klappbuch {
 
     }
 
+
     function abInDenStorage(): void {
 
         sessionStorage.setItem("oben", auswahl.BildpfadOben);
@@ -165,13 +164,6 @@ namespace Klappbuch {
         sessionStorage.setItem("unten", auswahl.BildpfadUnten);
         window.open("gesamtbild.html");
     }
-
-
-
-
-
-
-
 
 
 }

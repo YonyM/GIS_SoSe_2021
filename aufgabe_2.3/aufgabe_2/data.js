@@ -9,9 +9,6 @@ var Klappbuch;
                 { position: "Oben", bildPfad: "./Datein/Dach_2.jpg" },
                 { position: "Oben", bildPfad: "./Datein/Dach_3.jpg" }
             ]
-            /*option1: { position: "Oben", bildPfad: "./Datein/Rot.jpg" },
-            option2: { position: "Oben", bildPfad: "./Datein/Gruen.jpg"},
-            option3: { position: "Oben", bildPfad: "./Datein/Blau.jpg" }*/
         },
         {
             name: "Mitte",
@@ -20,9 +17,6 @@ var Klappbuch;
                 { position: "Mitte", bildPfad: "./Datein/Stockwerk_2.jpg" },
                 { position: "Mitte", bildPfad: "./Datein/Stockwerk_3.jpg" }
             ]
-            /*option1: { position: "Mitte", bildPfad: "./Datein/Blau.jpg" },
-            option2: { position: "Mitte", bildPfad: "./Datein/Rot.jpg" },
-            option3: { position: "Mitte", bildPfad: "./Datein/Gruen.jpg" }*/
         },
         {
             name: "Unten",
@@ -31,9 +25,6 @@ var Klappbuch;
                 { position: "Unten", bildPfad: "./Datein/Erdgeschoss_2.jpg" },
                 { position: "Unten", bildPfad: "./Datein/Erdgeschoss_3.jpg" }
             ]
-            /*option1: { position: "Unten", bildPfad: "./Datein/Gruen.jpg" },
-            option2: { position: "Unten", bildPfad: "./Datein/Blau.jpg" },
-            option3: { position: "Unten", bildPfad: "./Datein/Rot.jpg" } */
         }
     ];
     Klappbuch.datenJSON = JSON.stringify(Klappbuch.daten);

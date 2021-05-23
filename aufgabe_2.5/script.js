@@ -7,7 +7,7 @@ var Klappbuch;
         alleKategorien = await response.json();
         ersteKategorie(alleKategorien);
     }
-    ausJsonLesen("http://yonym.github.io/GIS_SoSe_2021/aufgabe_2.5/data.json");
+    ausJsonLesen("https://yonym.github.io/GIS_SoSe_2021/aufgabe_2.5/data.json");
     function ersteKategorie(kategorien) {
         let ueberschrift = document.createElement("h2");
         ueberschrift.setAttribute("id", "ueberschrift");

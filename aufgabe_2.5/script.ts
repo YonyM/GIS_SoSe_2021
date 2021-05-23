@@ -24,7 +24,7 @@ namespace Klappbuch {
 
     }
 
-    let alleKategorien: Kategorie[]
+    let alleKategorien: Kategorie[];
 
     async function ausJsonLesen(_url: RequestInfo): Promise<void> {
 

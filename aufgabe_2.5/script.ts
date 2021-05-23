@@ -1,4 +1,4 @@
-namespace KlappbuchAlt {
+namespace Klappbuch {
 
 
     interface Teilbild {
@@ -7,7 +7,7 @@ namespace KlappbuchAlt {
         bildPfad: string;
 
     }
-
+    
 
     export interface Kategorie {
 
@@ -16,7 +16,7 @@ namespace KlappbuchAlt {
 
     }
 
-    interface Auswahl {
+    export interface Auswahl {
         
         BildpfadOben: string;
         BildpfadMitte: string;
@@ -24,16 +24,20 @@ namespace KlappbuchAlt {
 
     }
 
-    function konvertieren(): Kategorie[] {
+    let alleKategorien: Kategorie[]
 
-        const alleDrei: Kategorie[] = JSON.parse(datenJSON);
-        return alleDrei;
+    async function ausJsonLesen(_url: RequestInfo): Promise<void> {
+
+        let response: Response = await fetch(_url);
+        alleKategorien = await response.json();
+
+        ersteKategorie(alleKategorien);
 
     }
+    
+    ausJsonLesen("http://127.0.0.1:5500/aufgabe_2.5/data.json");
 
-    const alleKategorien: Kategorie[] = konvertieren();
-
-    function ersteKategorie(): void {
+    function ersteKategorie(kategorien: Kategorie[]): void {
 
         let ueberschrift: HTMLElement = document.createElement("h2");
         ueberschrift.setAttribute("id", "ueberschrift");
@@ -42,15 +46,15 @@ namespace KlappbuchAlt {
         let kategorieDiv: HTMLDivElement = document.createElement("div");
         kategorieDiv.setAttribute("id", "div");
         document.body.appendChild(kategorieDiv);
-        for (let i: number = 0; i < alleKategorien[0].optionen.length; i++) {
-
-            TeilbildLaden(alleKategorien[0].optionen[i], kategorieDiv);
+        console.log(kategorien[0]);
+        for (let i: number = 0; i < kategorien[0].optionen.length; i++) {
+            
+            TeilbildLaden(kategorien[0].optionen[i], kategorieDiv);
 
         }
 
     }
-
-    ersteKategorie();
+    
     let auswahl: Auswahl = {BildpfadOben: "", BildpfadMitte: "", BildpfadUnten: ""};
 
 

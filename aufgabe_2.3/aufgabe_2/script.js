@@ -1,8 +1,8 @@
 "use strict";
-var Klappbuch;
-(function (Klappbuch) {
+var KlappbuchAlt;
+(function (KlappbuchAlt) {
     function konvertieren() {
-        const alleDrei = JSON.parse(Klappbuch.datenJSON);
+        const alleDrei = JSON.parse(KlappbuchAlt.datenJSON);
         return alleDrei;
     }
     const alleKategorien = konvertieren();
@@ -98,5 +98,5 @@ var Klappbuch;
         sessionStorage.setItem("unten", auswahl.BildpfadUnten);
         window.open("gesamtbild.html");
     }
-})(Klappbuch || (Klappbuch = {}));
+})(KlappbuchAlt || (KlappbuchAlt = {}));
 //# sourceMappingURL=script.js.map

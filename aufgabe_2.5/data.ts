@@ -1,4 +1,4 @@
-namespace KlappbuchAlt {
+namespace Klappbuch {
 
     export const daten: Kategorie[] = [
        

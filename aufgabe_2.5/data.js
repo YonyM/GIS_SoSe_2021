@@ -1,7 +1,7 @@
 "use strict";
-var KlappbuchAlt;
-(function (KlappbuchAlt) {
-    KlappbuchAlt.daten = [
+var Klappbuch;
+(function (Klappbuch) {
+    Klappbuch.daten = [
         {
             name: "Oben",
             optionen: [
@@ -27,6 +27,6 @@ var KlappbuchAlt;
             ]
         }
     ];
-    KlappbuchAlt.datenJSON = JSON.stringify(KlappbuchAlt.daten);
-})(KlappbuchAlt || (KlappbuchAlt = {}));
+    Klappbuch.datenJSON = JSON.stringify(Klappbuch.daten);
+})(Klappbuch || (Klappbuch = {}));
 //# sourceMappingURL=data.js.map

@@ -11,11 +11,11 @@ var P_3_1Server;
         let query = new URLSearchParams(formData);
         let url;
         if (pfad == "/html") {
-            url = "https://yonysgisserver.herokuapp.com/" + "?" + query.toString();
+            url = "https://yonysgisserver.herokuapp.com/html" + "?" + query.toString();
         }
         else if (pfad == "/json") {
             console.log("JSON-Datei:");
-            url = "https://yonysgisserver.herokuapp.com/" + "?" + query.toString();
+            url = "https://yonysgisserver.herokuapp.com/json" + "?" + query.toString();
         }
         let antwort = await fetch(url, { method: "get" });
         let antwortText = await antwort.text();

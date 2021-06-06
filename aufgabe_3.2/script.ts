@@ -16,12 +16,12 @@ namespace P_3_1Server {
 
         if (pfad == "/html") {
 
-            url = "https://yonysgisserver.herokuapp.com/" + "?" + query.toString();
+            url = "https://yonysgisserver.herokuapp.com/html" + "?" + query.toString();
         }
         else if (pfad == "/json") {
 
             console.log("JSON-Datei:");
-            url = "https://yonysgisserver.herokuapp.com/" + "?" + query.toString();
+            url = "https://yonysgisserver.herokuapp.com/json" + "?" + query.toString();
         }
 
         let antwort: Response = await fetch(url, {method: "get"});

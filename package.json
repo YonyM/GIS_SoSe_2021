@@ -8,7 +8,7 @@
     "@types/node": "^15.12.1"
   },
   "scripts": {
-    "start": "node aufgabe_3.1/server.js"
+    "start": "node aufgabe_3.2/server.js"
   },
   "repository": {
     "type": "git",

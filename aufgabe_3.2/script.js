@@ -25,8 +25,8 @@ var P_3_1Server;
             document.body.appendChild(antwortDiv);
         }
         if (pfad == "/json") {
-            let antwortJson = await JSON.parse(antwortText);
-            console.log(antwortText);
+            //let antwortJson: JSON = await JSON.parse(antwortText);
+            console.log(antwort);
         }
     }
 })(P_3_1Server || (P_3_1Server = {}));

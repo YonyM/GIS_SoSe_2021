@@ -1,14 +1,33 @@
 "use strict";
 var P_3_1Server;
 (function (P_3_1Server) {
-    let button = document.getElementById("button");
-    button.addEventListener("click", anfrage);
+    let pfad;
+    let hTMLButton = document.getElementById("HTMLButton");
+    hTMLButton.addEventListener("click", function () { pfad = "/html"; anfrage(); });
+    let jSONButton = document.getElementById("JSONButton");
+    jSONButton.addEventListener("click", function () { pfad = "/json"; anfrage(); });
     async function anfrage() {
         let formData = new FormData(document.forms[0]);
         let query = new URLSearchParams(formData);
-        let url = "https://yonysgisserver.herokuapp.com/" + "?" + query.toString();
+        let url;
+        if (pfad == "/html") {
+            url = "https://yonysgisserver.herokuapp.com/" + "?" + query.toString();
+        }
+        else if (pfad == "/json") {
+            console.log("JSON-Datei:");
+            url = "https://yonysgisserver.herokuapp.com/" + "?" + query.toString();
+        }
         let antwort = await fetch(url, { method: "get" });
-        console.log(await antwort.text());
+        let antwortText = await antwort.text();
+        if (pfad == "/html") {
+            let antwortDiv = document.createElement("div");
+            antwortDiv.innerHTML = antwortText;
+            document.body.appendChild(antwortDiv);
+        }
+        if (pfad == "/json") {
+            let antwortJson = await JSON.parse(antwortText);
+            console.log(antwortJson);
+        }
     }
 })(P_3_1Server || (P_3_1Server = {}));
 //# sourceMappingURL=script.js.map

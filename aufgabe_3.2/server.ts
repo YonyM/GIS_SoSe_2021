@@ -1,4 +1,5 @@
 import * as Http from "http"; //import sämtlicher Funktionalitäten von "http"
+import * as Url from "url";
 
 
 export namespace P_3_1Server { 
@@ -19,10 +20,25 @@ export namespace P_3_1Server {
     // wird ausgeführt wenn der Server eine Anfrage bekommt
     function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
         console.log("I hear voices!");  //Wird ausgegeben sobald der Server von jemandem erreicht wurde und die handleRequest "aktiviert" wird
-        _response.setHeader("content-type", "text/html; charset=utf-8"); //Definiert die "Art" der response-Daten
+
+        _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
-        _response.write(_request.url); //Zeigt die individuelle request-URL an.
-        console.log(_request.url); //Gibt die individuelle request-URL aus.
+
+        let urlparse: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
+        let url: URL = new URL(_request.url, "https://yonysgisserver.herokuapp.com/");
+
+        if (url.pathname == "/html") {
+            
+            for (let key in urlparse.query) {
+
+                _response.write("<p>" + key + ":" + urlparse.query[key] + "<p/>");
+            }
+        }
+        else if (url.pathname == "/json") {
+
+            let antwortJson: string = JSON.stringify(urlparse.query);
+            _response.write(antwortJson);
+        }
         _response.end();
     }
 }

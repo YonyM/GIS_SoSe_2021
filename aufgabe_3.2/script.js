@@ -26,7 +26,7 @@ var P_3_1Server;
         }
         if (pfad == "/json") {
             let antwortJson = await JSON.parse(antwortText);
-            console.log(antwortJson);
+            console.log(antwortText);
         }
     }
 })(P_3_1Server || (P_3_1Server = {}));

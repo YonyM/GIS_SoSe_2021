@@ -36,7 +36,7 @@ namespace P_3_1Server {
         if (pfad == "/json") {
 
             let antwortJson: JSON = await JSON.parse(antwortText);
-            console.log(antwortJson);
+            console.log(antwortText);
         }       
     }
 }

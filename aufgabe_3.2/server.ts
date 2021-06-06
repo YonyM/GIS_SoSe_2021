@@ -6,7 +6,7 @@ export namespace P_3_1Server {
     console.log("Starting server");    //Ausgabe zu Beginn des Serverstarts
     let port: number = Number(process.env.PORT);    //Ist mir nicht ganz klar
     if (!port)   
-        port = 8100;  // Setzt den Port auf 8100
+        port = 8101;  // Setzt den Port auf 8100
 
     let server: Http.Server = Http.createServer();  //Erstellt neuen http-Server
     server.addListener("request", handleRequest);   //"request-listener" für einkommende Anfragen an den Server -> bei einer Anfrage wird die Funktion "handleRequest ausgeführt"
@@ -25,21 +25,22 @@ export namespace P_3_1Server {
         _response.setHeader("Access-Control-Allow-Origin", "*");
 
         let urlparse: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
-        let url: URL = new URL(_request.url, "https://yonysgisserver.herokuapp.com/");
+        let url: URL = new URL(_request.url, "https://yonysgisserver.herokuapp.com");
 
         if (url.pathname == "/html") {
             
             for (let key in urlparse.query) {
 
+                console.log("html");
                 _response.write("<p>" + key + ":" + urlparse.query[key] + "<p/>");
             }
         }
         else if (url.pathname == "/json") {
 
+            console.log("json");
             let antwortJson: string = JSON.stringify(urlparse.query);
             _response.write(antwortJson);
         }
         _response.end();
-        
     }
 }

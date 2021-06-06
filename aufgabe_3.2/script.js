@@ -9,24 +9,25 @@ var P_3_1Server;
     async function anfrage() {
         let formData = new FormData(document.forms[0]);
         let query = new URLSearchParams(formData);
-        let url;
+        let url = "https://yonysgisserver.herokuapp.com";
+        //let url: string = "http://localhost:8101";
         if (pfad == "/html") {
-            url = "https://yonysgisserver.herokuapp.com/html" + "?" + query.toString();
+            url += "/html" + "?" + query.toString();
         }
         else if (pfad == "/json") {
             console.log("JSON-Datei:");
-            url = "https://yonysgisserver.herokuapp.com/json" + "?" + query.toString();
+            url += "/json" + "?" + query.toString();
         }
         let antwort = await fetch(url, { method: "get" });
         let antwortText = await antwort.text();
         if (pfad == "/html") {
             let antwortDiv = document.createElement("div");
-            antwortDiv.innerHTML = antwortText;
             document.body.appendChild(antwortDiv);
+            antwortDiv.innerHTML = antwortText;
         }
         if (pfad == "/json") {
-            //let antwortJson: JSON = await JSON.parse(antwortText);
-            console.log(antwort);
+            let antwortJson = await JSON.parse(antwortText);
+            console.log(antwortJson);
         }
     }
 })(P_3_1Server || (P_3_1Server = {}));

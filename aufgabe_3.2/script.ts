@@ -12,16 +12,18 @@ namespace P_3_1Server {
 
         let formData: FormData = new FormData(document.forms[0]);
         let query: URLSearchParams = new URLSearchParams(<any>formData);
-        let url: string;
+        let url: string = "https://yonysgisserver.herokuapp.com";
+        //let url: string = "http://localhost:8101";
+
 
         if (pfad == "/html") {
 
-            url = "https://yonysgisserver.herokuapp.com/html" + "?" + query.toString();
+            url += "/html" + "?" + query.toString();
         }
         else if (pfad == "/json") {
 
             console.log("JSON-Datei:");
-            url = "https://yonysgisserver.herokuapp.com/json" + "?" + query.toString();
+            url += "/json" + "?" + query.toString();
         }
 
         let antwort: Response = await fetch(url, {method: "get"});
@@ -30,13 +32,13 @@ namespace P_3_1Server {
         if (pfad == "/html") {
 
             let antwortDiv: HTMLDivElement = document.createElement("div");
-            antwortDiv.innerHTML = antwortText;
             document.body.appendChild(antwortDiv);
+            antwortDiv.innerHTML = antwortText;
         }
         if (pfad == "/json") {
 
-            //let antwortJson: JSON = await JSON.parse(antwortText);
-            console.log(antwort);
+            let antwortJson: JSON = await JSON.parse(antwortText);
+            console.log(antwortJson);
         }       
     }
 }

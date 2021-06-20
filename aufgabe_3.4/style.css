@@ -1,0 +1,17 @@
+button {
+
+    padding: 0.5em;
+}
+
+form {
+    padding-top: 20%;
+    padding-left: 15%;
+}
+
+label {
+    padding: 1em;
+}
+
+input {
+    padding: 0.3em;
+}

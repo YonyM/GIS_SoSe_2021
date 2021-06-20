@@ -16,7 +16,6 @@ async function datenAnzeigen() {
     url = url + "/datenAnzeigen" + "?" + MediaQueryList.toString();
     let antwort = await fetch(url, { method: "get" });
     let antwortText = await antwort.text();
-    //console.log(antwortText);
     let anzeigeDiv = document.getElementById("anzeigeDiv");
     anzeigeDiv.appendChild(document.createTextNode(antwortText));
 }

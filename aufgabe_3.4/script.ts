@@ -28,7 +28,6 @@ async function datenAnzeigen(): Promise <void> {
 
     let antwort: Response = await fetch(url, {method: "get"});
     let antwortText: string = await antwort.text();
-    //console.log(antwortText);
     let anzeigeDiv: HTMLDivElement = <HTMLDivElement>document.getElementById("anzeigeDiv");
     anzeigeDiv.appendChild(document.createTextNode(antwortText));
 

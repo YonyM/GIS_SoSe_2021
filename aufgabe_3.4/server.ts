@@ -46,7 +46,7 @@ async function handleRequest(_request: Http.IncomingMessage, _response: Http.Ser
 
     if (_url.pathname == "/datenAbschicken") {
 
-        console.log(_url.query);
+        console.log(_url.path);
         students.insertOne(_url.query);  
     }
     

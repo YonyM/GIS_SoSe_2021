@@ -22,7 +22,7 @@ async function handleRequest(_request, _response) {
     console.log("handleRequest");
     let _url = Url.parse(_request.url, true);
     if (_url.pathname == "/datenAbschicken") {
-        console.log(_url.query);
+        console.log(_url.path);
         students.insertOne(_url.query);
     }
     if (_url.pathname == "/datenAnzeigen") {

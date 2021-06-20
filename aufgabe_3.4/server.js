@@ -21,19 +21,19 @@ connectToDatabase(url);
 async function handleRequest(_request, _response) {
     console.log("handleRequest");
     let _url = Url.parse(_request.url, true);
+    _response.setHeader("content-type", "text/html; charset=utf-8");
+    _response.setHeader("Access-Control-Allow-Origin", "*");
     if (_url.pathname == "/datenAbschicken") {
         console.log(_url.path);
         students.insertOne(_url.query);
     }
     if (_url.pathname == "/datenAnzeigen") {
-        _response.setHeader("content-type", "text/html; charset=utf-8");
-        _response.setHeader("Access-Control-Allow-Origin", "*");
         let cursor = students.find();
         let dbInhalt = await cursor.toArray();
         _response.write(JSON.stringify(dbInhalt));
         console.log(JSON.stringify(dbInhalt));
-        _response.end();
     }
+    _response.end();
 }
 function handleListen() {
     console.log("ich warte...");

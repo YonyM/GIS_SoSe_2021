@@ -43,27 +43,29 @@ async function handleRequest(_request: Http.IncomingMessage, _response: Http.Ser
 
     let _url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
 
+    _response.setHeader("content-type", "text/html; charset=utf-8");
+    _response.setHeader("Access-Control-Allow-Origin", "*");
+
 
     if (_url.pathname == "/datenAbschicken") {
 
         console.log(_url.path);
-        students.insertOne(_url.query);  
+        students.insertOne(_url.query);
     }
-    
-    if (_url.pathname == "/datenAnzeigen") {
 
-        _response.setHeader("content-type", "text/html; charset=utf-8");
-        _response.setHeader("Access-Control-Allow-Origin", "*");
+    if (_url.pathname == "/datenAnzeigen") {
 
         let cursor: Mongo.Cursor = students.find();
         let dbInhalt: Students[] = await cursor.toArray();
         _response.write(JSON.stringify(dbInhalt));
         console.log(JSON.stringify(dbInhalt));
-        _response.end();
+    
     }
+    _response.end();
 }
 
 function handleListen(): void {
     console.log("ich warte...");
 }
+
 

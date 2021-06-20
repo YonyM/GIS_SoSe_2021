@@ -15,13 +15,14 @@ async function connectToDatabase(_url) {
     let options = { useNewUrlParser: true, useUnifiedTopology: true };
     let mongoClient = new Mongo.MongoClient(_url, options);
     await mongoClient.connect();
+    students = mongoClient.db("Test").collection("Students");
 }
 connectToDatabase(url);
 async function handleRequest(_request, _response) {
     console.log("handleRequest");
     let url = Url.parse(_request.url, true);
     if (url.pathname == "/datenAbschicken") {
-        await students.insertOne(url.query);
+        students.insertOne(url.query);
     }
     if (url.pathname == "/datenAnzeigen") {
         _response.setHeader("content-type", "text/html; charset=utf-8");

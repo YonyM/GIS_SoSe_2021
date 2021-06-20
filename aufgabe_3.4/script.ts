@@ -6,8 +6,8 @@ abschickenButton.addEventListener("click", datenAbschicken);
 let anzeigenButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("anzeigen");
 anzeigenButton.addEventListener("click", datenAnzeigen);
 
-let url: string = "http://localhost:8101";
-//let url: string = "https://yonysgisserver.herokuapp.com";
+//let url: string = "http://localhost:8101";
+let url: string = "https://yonysgisserver.herokuapp.com";
 
 
 async function datenAbschicken(): Promise<void> {

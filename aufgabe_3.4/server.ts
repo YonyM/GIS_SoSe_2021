@@ -31,6 +31,8 @@ async function connectToDatabase(_url: string): Promise<void> {
     let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_url, options);
     await mongoClient.connect();
 
+    students = mongoClient.db("Test").collection("Students");
+
 }
 connectToDatabase(url);
 
@@ -44,7 +46,7 @@ async function handleRequest(_request: Http.IncomingMessage, _response: Http.Ser
 
     if (url.pathname == "/datenAbschicken") {
 
-        await students.insertOne(url.query);
+        students.insertOne(url.query);
     }
     
     if (url.pathname == "/datenAnzeigen") {

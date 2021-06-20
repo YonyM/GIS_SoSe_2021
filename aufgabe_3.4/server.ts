@@ -51,7 +51,6 @@ async function handleRequest(_request: Http.IncomingMessage, _response: Http.Ser
 
         console.log(_url.path);
         students.insertOne(_url.query);
-        connectToDatabase(url);
     }
 
     if (_url.pathname == "/datenAnzeigen") {

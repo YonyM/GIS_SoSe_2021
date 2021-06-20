@@ -26,7 +26,6 @@ async function handleRequest(_request, _response) {
     if (_url.pathname == "/datenAbschicken") {
         console.log(_url.path);
         students.insertOne(_url.query);
-        connectToDatabase(url);
     }
     if (_url.pathname == "/datenAnzeigen") {
         let cursor = students.find();

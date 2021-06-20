@@ -6,8 +6,8 @@ abschickenButton.addEventListener("click", datenAbschicken);
 let anzeigenButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("anzeigen");
 anzeigenButton.addEventListener("click", datenAnzeigen);
 
-let url: string = "http://localhost:8101";
-//let url: string = "https://yonysgisserver.herokuapp.com";
+//let url: string = "http://localhost:8101";
+let url: string = "https://yonysgisserver.herokuapp.com";
 
 
 async function datenAbschicken(): Promise<void> {
@@ -24,6 +24,7 @@ async function datenAbschicken(): Promise<void> {
 
 async function datenAnzeigen(): Promise <void> {
 
+    console.log("datenAnzeigen");
     url = url + "/datenAnzeigen" + "?" + MediaQueryList.toString();
 
     let antwort: Response = await fetch(url, {method: "get"});

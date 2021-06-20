@@ -20,16 +20,19 @@ async function connectToDatabase(_url) {
 connectToDatabase(url);
 async function handleRequest(_request, _response) {
     console.log("handleRequest");
-    let url = Url.parse(_request.url, true);
-    if (url.pathname == "/datenAbschicken") {
-        students.insertOne(url.query);
+    let _url = Url.parse(_request.url, true);
+    if (_url.pathname == "/datenAbschicken") {
+        console.log(_url.query);
+        students.insertOne(_url.query);
+        //students.deleteMany({"lname": "Georgii"});   
     }
-    if (url.pathname == "/datenAnzeigen") {
+    if (_url.pathname == "/datenAnzeigen") {
         _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
-        let dbInhalt = await students.find().toArray();
-        console.log(dbInhalt);
-        _response.write(JSON.stringify(await students.find().toArray()));
+        let cursor = students.find();
+        let dbInhalt = await cursor.toArray();
+        _response.write(JSON.stringify(dbInhalt));
+        console.log(JSON.stringify(dbInhalt));
         _response.end();
     }
 }

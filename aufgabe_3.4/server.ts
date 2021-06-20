@@ -41,22 +41,25 @@ async function handleRequest(_request: Http.IncomingMessage, _response: Http.Ser
 
     console.log("handleRequest");
 
-    let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
+    let _url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
 
 
-    if (url.pathname == "/datenAbschicken") {
+    if (_url.pathname == "/datenAbschicken") {
 
-        students.insertOne(url.query);
+        console.log(_url.query);
+        students.insertOne(_url.query);
+        //students.deleteMany({"lname": "Georgii"});   
     }
     
-    if (url.pathname == "/datenAnzeigen") {
+    if (_url.pathname == "/datenAnzeigen") {
 
         _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
 
-        let dbInhalt: Students[] = await students.find().toArray();
-        console.log(dbInhalt);
-        _response.write(JSON.stringify(await students.find().toArray()));
+        let cursor: Mongo.Cursor = students.find();
+        let dbInhalt: Students[] = await cursor.toArray();
+        _response.write(JSON.stringify(dbInhalt));
+        console.log(JSON.stringify(dbInhalt));
         _response.end();
     }
 }

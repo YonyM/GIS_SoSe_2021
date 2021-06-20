@@ -9,8 +9,8 @@ server.addListener("request", handleRequest);
 server.addListener("listening", handleListen);
 server.listen(port);
 let students;
-let url = "mongodb://localhost:27017";
-//let url: string = "mongodb+srv://fuergisregistrierichmic.lq7zx.mongodb.net";
+//let url: string = "mongodb://localhost:27017";
+let url = "mongodb+srv://fuergisregistrierichmic.lq7zx.mongodb.net";
 async function connectToDatabase(_url) {
     let options = { useNewUrlParser: true, useUnifiedTopology: true };
     let mongoClient = new Mongo.MongoClient(_url, options);

@@ -20,8 +20,8 @@ interface Students {
 
 let students: Mongo.Collection;
 
-let url: string = "mongodb://localhost:27017";
-//let url: string = "mongodb+srv://fuergisregistrierichmic.lq7zx.mongodb.net";
+//let url: string = "mongodb://localhost:27017";
+let url: string = "mongodb+srv://fuergisregistrierichmic.lq7zx.mongodb.net";
 
 
 async function connectToDatabase(_url: string): Promise<void> {

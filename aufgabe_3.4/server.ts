@@ -47,8 +47,7 @@ async function handleRequest(_request: Http.IncomingMessage, _response: Http.Ser
     if (_url.pathname == "/datenAbschicken") {
 
         console.log(_url.query);
-        students.insertOne(_url.query);
-        //students.deleteMany({"lname": "Georgii"});   
+        students.insertOne(_url.query);  
     }
     
     if (_url.pathname == "/datenAnzeigen") {

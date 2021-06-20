@@ -24,7 +24,6 @@ async function handleRequest(_request, _response) {
     if (_url.pathname == "/datenAbschicken") {
         console.log(_url.query);
         students.insertOne(_url.query);
-        //students.deleteMany({"lname": "Georgii"});   
     }
     if (_url.pathname == "/datenAnzeigen") {
         _response.setHeader("content-type", "text/html; charset=utf-8");

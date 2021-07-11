@@ -12,7 +12,7 @@
 
 .label {
 
-    font-family: Sedgwick Ave Display;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2em;
     display: block;
     padding-bottom: 0.5em;
@@ -31,7 +31,7 @@
 h3 {
 
     width: 80%;
-    font-family: Sedgwick Ave Display;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.3em;
     color: #008284;
     padding-bottom: 0.5em;
@@ -40,7 +40,7 @@ h3 {
 #hinzufuegen {
 
     color: white;
-    font-family: Sedgwick Ave Display;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2em;
     border-style: solid;
     border-color: black;

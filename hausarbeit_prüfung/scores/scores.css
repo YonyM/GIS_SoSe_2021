@@ -18,7 +18,7 @@ table {
 th {
 
     font-size: 2em;
-    font-family: Sedgwick Ave Display;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 1em;
 }
 
@@ -51,7 +51,7 @@ td {
 
 h2 {
 
-    font-family: Sedgwick Ave Display;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2em;
     display: inline;
     
@@ -65,7 +65,7 @@ a:link, a:visited {
 
 form {
 
-    font-family: Sedgwick Ave Display;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2em;
     text-align: center;
     padding-top: 5em;
@@ -92,7 +92,7 @@ input {
     border-color: black;
     color: white;
     background-color: #008284;
-    font-family: Sedgwick Ave Display;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 0.8em;
 }
 

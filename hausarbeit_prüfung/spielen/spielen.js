@@ -2,6 +2,7 @@
 var Memeory;
 (function (Memeory) {
     let url = "https://yonysgisserver.herokuapp.com/";
+    //let url: string = "http://localhost:8101/";
     let paerchenCounter;
     function warten(_ms) {
         return new Promise(resolve => setTimeout(resolve, _ms));
@@ -78,7 +79,7 @@ var Memeory;
                         let zeitString = ((dateEnd.getTime() - date.getTime()) / 1000) + " Sek";
                         localStorage.setItem("zeit", zeitString);
                         localStorage.setItem("zeitEintragen", "ja");
-                        window.location.href = "/hausarbeit_pruefung/scores/scores.html";
+                        window.location.href = "/hausarbeit_prüfung/scores/scores.html";
                     }
                 }
                 else {

@@ -8,6 +8,7 @@ namespace Memeory {
     }
 
     let url: string = "https://yonysgisserver.herokuapp.com/"; 
+    //let url: string = "http://localhost:8101/";
 
     async function zeitenAnfragen(): Promise<void> {
 

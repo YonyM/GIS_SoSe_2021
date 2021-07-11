@@ -28,15 +28,18 @@ var Memeory;
     Memeory.kartenVorschau = kartenVorschau;
     async function karteLoeschen(_click) {
         let url = "https://yonysgisserver.herokuapp.com/";
+        //let url: string = "http://localhost:8101/";
         let karteLoeschen = _click.currentTarget;
         url = url + karteLoeschen.id + "?";
         location.reload();
         await fetch(url);
     }
     async function karteHinzufuegen() {
+        let url = "https://yonysgisserver.herokuapp.com/";
+        //let url: string = "http://localhost:8101/";
         let formData = new FormData(document.forms[0]);
         let query = new URLSearchParams(formData);
-        let url = "https://yonysgisserver.herokuapp.com/" + "karteHinzufuegen" + "?" + query.toString();
+        url = url + "karteHinzufuegen" + "?" + query.toString();
         location.reload();
         await fetch(url);
     }

@@ -2,6 +2,7 @@
 var Memeory;
 (function (Memeory) {
     let url = "https://yonysgisserver.herokuapp.com/";
+    //let url: string = "http://localhost:8101/";
     async function zeitenAnfragen() {
         url = url + "zeitenAnfragen" + "?";
         let antwort = await fetch(url, { method: "get" });

@@ -4,7 +4,10 @@ import * as Mongo from "mongodb";
 
 namespace Memeory {
 
-    let port: number = 8101;
+    let port: number = Number(process.env.PORT);
+    if (!port) {
+        port = 8101;
+    }
     let server: Http.Server = Http.createServer();
 
     server.addListener("request", handleRequest);

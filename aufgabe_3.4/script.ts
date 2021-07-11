@@ -14,7 +14,7 @@ async function datenAbschicken(): Promise<void> {
 
     console.log("Daten werden abgeschickt!...");
     let formData: FormData = new FormData(document.forms[0]);
-
+    
     let query: URLSearchParams = new URLSearchParams(<any>formData);
     url = url + "/datenAbschicken" + "?" + query.toString();
 

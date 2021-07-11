@@ -1,0 +1,136 @@
+#logo {
+
+    width: 200px;
+    padding-bottom: 3em;
+}
+
+table {
+
+    position: absolute;
+    left: 25%;
+    top: 5%;
+    margin: auto;
+    padding: 5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+th {
+
+    font-size: 2em;
+    font-family: Sedgwick Ave Display;
+    padding: 1em;
+}
+
+tr {
+
+    margin: auto;
+}
+
+td {
+
+    border-style: solid;
+    padding: 1em
+}
+
+.link {
+
+    margin: 1%;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    text-align: center;
+    color: white;
+    border-style: solid;
+    border-radius: 0.2em;
+    border-color: black;
+    background-color: #008284;
+    width: fit-content;
+}
+
+h2 {
+
+    font-family: Sedgwick Ave Display;
+    font-size: 2em;
+    display: inline;
+    
+}
+
+a:link, a:visited {
+
+    text-decoration: none;
+    color: white;
+}
+
+form {
+
+    font-family: Sedgwick Ave Display;
+    font-size: 2em;
+    text-align: center;
+    padding-top: 5em;
+}
+
+input {
+
+    margin: auto;
+    font-size: 0.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    display: block;
+    padding: 0.3em;
+    margin-bottom: 1em;
+}
+
+#eintragen {
+
+    padding: 1em;
+    padding-top: 0.3em;
+    padding-bottom: 0.2em;
+    border-radius: 0.2em;
+    border-style: solid;
+    border-color: black;
+    color: white;
+    background-color: #008284;
+    font-family: Sedgwick Ave Display;
+    font-size: 0.8em;
+}
+
+@media screen and (max-width: 600px) {
+
+    #logoDiv {
+
+        margin: auto;
+        width: 60%;
+    }
+    
+    #logo {
+
+        width: 100%;
+        padding-bottom: 1em;
+    }
+
+    .link {
+
+        display: block;
+        margin: auto;
+
+    }
+
+    form {
+
+        padding-top: 0.5em;
+    }
+
+    table {
+
+        margin: auto;
+        display: block;
+        position: static;
+    }
+
+    th {
+
+        text-align: center;
+    }
+}

@@ -21,7 +21,7 @@ interface Students {
 let students: Mongo.Collection;
 
 //let url: string = "mongodb://localhost:27017";
-let url: string = "mongodb+srv://fuergisregistrierichmic.lq7zx.mongodb.net";
+let url: string = "mongodb+srv://HelloWorld2021:HelloWorld2021@fuergisregistrierichmic.lq7zx.mongodb.net/MemeoryDB?retryWrites=true&w=majority";
 
 
 async function connectToDatabase(_url: string): Promise<void> {

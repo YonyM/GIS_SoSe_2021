@@ -1,0 +1,85 @@
+
+#logo {
+
+    width: 200px;
+}
+#form {
+
+    width: 80%;
+    margin: auto;
+    padding: 3em
+}
+
+.label {
+
+    font-family: Sedgwick Ave Display;
+    font-size: 2em;
+    display: block;
+    padding-bottom: 0.5em;
+}
+
+.input {
+
+    border-radius: 0.2em;
+    width: 80%;
+    height: 50%;
+    padding: 0.5em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+
+h3 {
+
+    width: 80%;
+    font-family: Sedgwick Ave Display;
+    font-size: 1.3em;
+    color: #008284;
+    padding-bottom: 0.5em;
+}
+
+#hinzufuegen {
+
+    color: white;
+    font-family: Sedgwick Ave Display;
+    font-size: 2em;
+    border-style: solid;
+    border-color: black;
+    border-radius: 0.2em;
+    padding: 0.3em;
+    background-color: #008284;
+}
+
+
+.adminAnzeige {
+
+    width: 80%;
+    margin: auto;
+}
+
+.adminKarteRahmen {
+
+    width: 12em;
+    height: 12em;
+    padding: 1%;
+    float: left;
+    margin: auto;
+}
+
+.loeschen {
+
+    position: absolute;
+    width: 2.5em;
+    height: auto;
+    padding-right: 0.2em ;
+}
+
+.karte {
+
+    width: 8em;
+    height: auto;
+    border-style: solid;
+    border-color: black;
+    border-radius: 0.2em;
+    border-width: medium;
+}
+

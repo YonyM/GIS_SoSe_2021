@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="../spielen/spielen.js" defer></script>
+    <script src="admin.js" defer></script>
+</head>
+<body>
+
+    <div id="logoDiv">
+
+        <a href="../startseite/startseite.html"><img id="logo" src="../testDatein/logo.png" alt="Logo"></a>
+
+    </div>
+
+    <form id="form">
+        <label class="label" for="source">kopiere hier deinen Bildlink rein</label>
+        <input class="input" type ="text" name="source">
+        <label class="label" for="bezeichnung">wähle eine Bezeichnung für deine Karte</label>
+        <input class="input" type ="text" name="bezeichnung">
+
+        <h3>Du kannst Bilder mit beliebigen Maßen hinzufügen, denk aber daran,
+            dass nicht-quadratische Bilder es dem Auge beim spielen schwieriger machen.
+        </h3>
+
+        <button type="button" id="hinzufuegen">Karte hinzufügen</button>
+    </form>
+    
+
+    <div class="adminAnzeige" id="anzeigen">
+
+    </div>
+    
+</body>
+</html>

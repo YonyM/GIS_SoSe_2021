@@ -1,0 +1,122 @@
+#logo {
+    
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-top: auto;
+    display: block;
+}
+
+#logoDiv {
+    padding-top: 5%;
+    margin: auto;
+    width: 40%;
+}
+
+#menu {
+
+    padding-top: 4em;
+    display:flex;
+    margin: auto;
+    width: 60%;
+    
+}
+
+.linkDiv {
+  
+    padding: 0.5em;
+    float: left;
+    margin: auto;
+}
+
+.link {
+
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    border-style: solid;
+    border-radius: 0.2em;
+    border-color: black;
+    background-color: #008284;
+    width: fit-content;
+}
+
+.spielenLink {
+
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    border-style: solid;
+    border-radius: 0.2em;
+    border-color: black;
+    background-color: white;
+    width: fit-content;
+}
+
+h2 {
+
+    font-family: Sedgwick Ave Display;
+    font-size: 2em;
+    display: inline;
+    
+}
+
+a:link, a:visited {
+
+    text-decoration: none;
+    color: white;
+}
+
+#spielenSchrift:link, #spielenSchrift:visited {
+
+    text-decoration: none;
+    color: #008284;
+}
+
+@media screen and (max-width: 1200px) {
+
+    #logoDiv {
+
+        padding-top: 10%;
+    }
+    #menu {
+
+        padding-top: 1%;
+    }
+}
+
+@media  screen and (max-width: 950px) {
+    
+    #menu {
+
+        display: block;
+
+    }
+
+    .linkDiv {
+
+        text-align: center;
+        display: block;
+        margin: auto;
+        float: none;
+        padding-top: 10%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+   
+    #logoDiv {
+
+        width: 270px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .linkDiv {
+
+        padding-top: 20%;
+    }
+}

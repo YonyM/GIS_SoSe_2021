@@ -1,0 +1,117 @@
+
+#logo {
+    
+    width: 200px;
+}
+
+.spielfeld {
+
+    width: 50%;
+    margin: auto;
+}
+
+.karteRahmen {
+
+    width: 10em;
+    height: 10em;
+    padding: 1em;
+    float: left;
+}
+
+.karten {
+
+    width: 10em;
+    border-style: solid;
+    border-color: black;
+    border-radius: 0.2em;
+    border-width: medium;
+}
+
+
+@media screen and (max-width: 1550px) {
+
+   .spielfeld {
+
+    width: 60%;
+   }
+
+}
+
+@media screen and (max-width: 1300px) {
+
+    .spielfeld {
+ 
+     width: 70%;
+    }
+ 
+ }
+
+ @media screen and (max-width: 1130px) {
+
+    .spielfeld {
+ 
+     width: 80%;
+    }
+ 
+ }
+
+ @media screen and (max-width: 1000px) {
+
+    .karteRahmen {
+
+        width: 8em;
+        height: 8em;
+    }
+
+    .karten {
+
+        width: 8em;
+        
+    }
+ 
+ }
+
+ @media screen and (max-width: 815px) {
+
+    .spielfeld {
+        
+        width: 90%;
+    }
+ }
+
+ @media screen and (max-width: 730px) {
+
+    .karteRahmen {
+
+        width: 6em;
+        height: 6em;
+    }
+
+    .karten {
+
+        width: 6em;
+    }
+ }
+
+ @media screen and (max-width: 585px) {
+
+    .karteRahmen {
+
+        padding: 0.5em;
+    }
+ }
+
+ @media screen and (max-width: 515px) {
+
+
+    .karteRahmen {
+
+        width: 5em;
+        height: 5em;
+    }
+
+    .karten {
+
+        width: 5em;
+    }
+ }

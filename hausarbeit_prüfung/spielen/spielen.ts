@@ -8,7 +8,7 @@ namespace Memeory {
 
     }
 
-    let url: string = "https://yonysgisserver.herokuapp.com";
+    let url: string = "https://myfirsttestserverisnowlive.herokuapp.com";
     //let url: string = "http://localhost:8101/";
 
     let paerchenCounter: number;
@@ -24,7 +24,7 @@ namespace Memeory {
         let formData: FormData = new FormData(document.forms[0]);
         let query: URLSearchParams = new URLSearchParams(<any>formData);
 
-        url = url + "/kartenAnfragen" + "?" + query.toString();
+        url = url + "kartenAnfragen" + "?" + query.toString();
 
         let antwort: Response = await fetch(url, { method: "get" });
         let antwortString: string = await antwort.text();

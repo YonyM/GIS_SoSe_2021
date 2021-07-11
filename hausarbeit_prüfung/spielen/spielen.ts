@@ -130,7 +130,7 @@ namespace Memeory {
                         localStorage.setItem("zeit", zeitString);
                         localStorage.setItem("zeitEintragen", "ja");
                         //window.location.href = "/scores/scores.html";
-                        window.open("./scores/scores.html");
+                        window.open("/GIS_SoSe_2021/hausarbeit_prüfung/scores/scores.html");
                     }
                 }
                 else {

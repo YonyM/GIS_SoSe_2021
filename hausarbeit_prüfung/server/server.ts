@@ -11,6 +11,7 @@ namespace Memeory {
     let server: Http.Server = Http.createServer();
 
     console.log(port);
+    
     server.addListener("request", handleRequest);
     server.addListener("listening", handleListen);
 
@@ -30,7 +31,7 @@ namespace Memeory {
         await mongoClient.connect();
 
         karten = mongoClient.db("MemeoryDB").collection("Karten");
-        zeiten = mongoClient.db("MemeoryDB").collection("NamenUndZeiten");
+       // zeiten = mongoClient.db("MemeoryDB").collection("NamenUndZeiten");
         console.log("Database connected", karten != undefined);
         console.log("Warum geht das nich????");
     }

@@ -8,12 +8,12 @@ namespace Memeory {
     }
 
     let url: string = "https://yonysgisserver.herokuapp.com/"; 
-    //let url: string = "https://yonyszweiterserver.herokuapp.com/";
+   // let url: string = "https://myfirsttestserverisnowlive.herokuapp.com/";
     //let url: string = "http://localhost:8101/";
 
     async function zeitenAnfragen(): Promise<void> {
-
-        url = url + "zeitenAnfragen" + "?";
+        console.log(url);
+        url = url + "zeitenAnfragen";
 
         let antwort: Response = await fetch(url, { method: "get" });
         let antwortString: string = await antwort.text();

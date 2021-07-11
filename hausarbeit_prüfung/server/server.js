@@ -5,12 +5,16 @@ const Url = require("url");
 const Mongo = require("mongodb");
 var Memeory;
 (function (Memeory) {
-    let port = 8101;
+    let karten;
+    let port = Number(process.env.PORT);
+    if (!port) {
+        port = 8101;
+    }
     let server = Http.createServer();
+    console.log(port);
     server.addListener("request", handleRequest);
     server.addListener("listening", handleListen);
     server.listen(port);
-    let karten;
     let zeiten;
     let urlDB = "mongodb+srv://HelloWorld2021:HelloWorld2021@fuergisregistrierichmic.lq7zx.mongodb.net/MemeoryDB?retryWrites=true&w=majority";
     async function connectToDB(_url) {
@@ -18,7 +22,9 @@ var Memeory;
         let mongoClient = new Mongo.MongoClient(_url, options);
         await mongoClient.connect();
         karten = mongoClient.db("MemeoryDB").collection("Karten");
-        zeiten = mongoClient.db("MemeoryDB").collection("NamenUndZeiten");
+        // zeiten = mongoClient.db("MemeoryDB").collection("NamenUndZeiten");
+        console.log("Database connected", karten != undefined);
+        console.log("Warum geht das nich????");
     }
     connectToDB(urlDB);
     async function handleRequest(_request, _response) {

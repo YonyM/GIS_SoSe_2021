@@ -3,6 +3,7 @@ import * as Url from "url";
 import * as Mongo from "mongodb";
 
 namespace Memeory {
+    let karten: Mongo.Collection;
 
     let port: number = Number(process.env.PORT);
     if (!port) {
@@ -18,7 +19,7 @@ namespace Memeory {
     server.listen(port);
 
 
-    let karten: Mongo.Collection;
+  
     let zeiten: Mongo.Collection;
 
     let urlDB: string = "mongodb+srv://HelloWorld2021:HelloWorld2021@fuergisregistrierichmic.lq7zx.mongodb.net/MemeoryDB?retryWrites=true&w=majority";

@@ -10,7 +10,7 @@ namespace Memeory {
     }
     let server: Http.Server = Http.createServer();
 
-    console.log("port");
+    console.log(port);
     server.addListener("request", handleRequest);
     server.addListener("listening", handleListen);
 

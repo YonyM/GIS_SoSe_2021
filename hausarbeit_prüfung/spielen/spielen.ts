@@ -8,7 +8,7 @@ namespace Memeory {
 
     }
 
-    let url: string = "http://localhost:8101/";
+    let url: string = "https://yonysgisserver.herokuapp.com/";
 
     let paerchenCounter: number;
 

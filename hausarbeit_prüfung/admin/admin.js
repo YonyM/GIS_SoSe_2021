@@ -27,7 +27,7 @@ var Memeory;
     }
     Memeory.kartenVorschau = kartenVorschau;
     async function karteLoeschen(_click) {
-        let url = "http://localhost:8101/";
+        let url = "https://yonysgisserver.herokuapp.com/";
         let karteLoeschen = _click.currentTarget;
         url = url + karteLoeschen.id + "?";
         location.reload();
@@ -36,7 +36,7 @@ var Memeory;
     async function karteHinzufuegen() {
         let formData = new FormData(document.forms[0]);
         let query = new URLSearchParams(formData);
-        let url = "http://localhost:8101/" + "karteHinzufuegen" + "?" + query.toString();
+        let url = "https://yonysgisserver.herokuapp.com/" + "karteHinzufuegen" + "?" + query.toString();
         location.reload();
         await fetch(url);
     }

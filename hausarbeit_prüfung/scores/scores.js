@@ -1,7 +1,7 @@
 "use strict";
 var Memeory;
 (function (Memeory) {
-    let url = "http://localhost:8101/";
+    let url = "https://yonysgisserver.herokuapp.com/";
     async function zeitenAnfragen() {
         url = url + "zeitenAnfragen" + "?";
         let antwort = await fetch(url, { method: "get" });

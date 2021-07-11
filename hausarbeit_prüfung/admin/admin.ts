@@ -39,7 +39,7 @@ namespace Memeory {
 
     async function karteLoeschen(_click: MouseEvent): Promise<void> {
 
-        let url: string = "http://localhost:8101/";
+        let url: string = "https://yonysgisserver.herokuapp.com/";
 
         let karteLoeschen: HTMLImageElement = <HTMLImageElement>_click.currentTarget;
 
@@ -55,7 +55,7 @@ namespace Memeory {
         let formData: FormData = new FormData(document.forms[0]);
         let query: URLSearchParams = new URLSearchParams(<any>formData);
 
-        let url: string = "http://localhost:8101/" + "karteHinzufuegen" + "?" + query.toString();
+        let url: string = "https://yonysgisserver.herokuapp.com/" + "karteHinzufuegen" + "?" + query.toString();
 
         location.reload();
         await fetch(url);

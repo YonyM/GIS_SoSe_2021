@@ -11,7 +11,7 @@
     "@types/node": "^15.12.1"
   },
   "scripts": {
-    "start": "node aufgabe_3.4/server.js"
+    "start": "node hausarbeit_pruefung/server.js"
   },
   "repository": {
     "type": "git",

@@ -37,18 +37,22 @@ namespace Memeory {
 
         let _url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
 
-        _response.setHeader("content-type", "text/html; charset=utf-8");
-        _response.setHeader("Access-Control-Allow-Origin", "*");
+        //_response.setHeader("content-type", "text/html; charset=utf-8");
+        //_response.setHeader("Access-Control-Allow-Origin", "*");
         console.log(_url.pathname);
 
         if (_url.pathname == "/kartenAnfragen") {
 
+            _response.setHeader("content-type", "text/html; charset=utf-8");
+            _response.setHeader("Access-Control-Allow-Origin", "*");
             _response.write(JSON.stringify(await karten.find().toArray()));
             _response.end();
 
         }
         if (_url.pathname == "/zeitenAnfragen") {
 
+            _response.setHeader("content-type", "text/html; charset=utf-8");
+            _response.setHeader("Access-Control-Allow-Origin", "*");
             _response.write(JSON.stringify(await zeiten.find().toArray()));
             _response.end();
 
@@ -66,12 +70,12 @@ namespace Memeory {
         else {
 
             console.log(_url.pathname.substr(1, _url.pathname.length));
-            karten.deleteOne({"bezeichnung": _url.pathname.substr(1, _url.pathname.length)});
+            karten.deleteOne({ "bezeichnung": _url.pathname.substr(1, _url.pathname.length) });
 
         }
         //_response.end();
 
-        
+
     }
 
     function handleListen(): void {

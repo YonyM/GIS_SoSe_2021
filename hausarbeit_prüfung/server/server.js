@@ -24,14 +24,18 @@ var Memeory;
     async function handleRequest(_request, _response) {
         console.log("I hear voices!");
         let _url = Url.parse(_request.url, true);
-        _response.setHeader("content-type", "text/html; charset=utf-8");
-        _response.setHeader("Access-Control-Allow-Origin", "*");
+        //_response.setHeader("content-type", "text/html; charset=utf-8");
+        //_response.setHeader("Access-Control-Allow-Origin", "*");
         console.log(_url.pathname);
         if (_url.pathname == "/kartenAnfragen") {
+            _response.setHeader("content-type", "text/html; charset=utf-8");
+            _response.setHeader("Access-Control-Allow-Origin", "*");
             _response.write(JSON.stringify(await karten.find().toArray()));
             _response.end();
         }
         if (_url.pathname == "/zeitenAnfragen") {
+            _response.setHeader("content-type", "text/html; charset=utf-8");
+            _response.setHeader("Access-Control-Allow-Origin", "*");
             _response.write(JSON.stringify(await zeiten.find().toArray()));
             _response.end();
         }

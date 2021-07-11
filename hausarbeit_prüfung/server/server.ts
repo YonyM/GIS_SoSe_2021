@@ -27,6 +27,7 @@ namespace Memeory {
 
         karten = mongoClient.db("MemeoryDB").collection("Karten");
         zeiten = mongoClient.db("MemeoryDB").collection("NamenUndZeiten");
+        console.log("Database connected", karten != undefined);
     }
 
     connectToDB(urlDB);

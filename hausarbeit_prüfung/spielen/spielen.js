@@ -81,7 +81,7 @@ var Memeory;
                         let zeitString = ((dateEnd.getTime() - date.getTime()) / 1000) + " Sek";
                         localStorage.setItem("zeit", zeitString);
                         localStorage.setItem("zeitEintragen", "ja");
-                        window.location.replace("https://yonym.github.io/GIS_SoSe_2021/hausarbeit_pr%C3%BCfung/scores/scores.html");
+                        window.location.replace("../scores/scores.html");
                     }
                 }
                 else {

@@ -9,7 +9,6 @@ var Memeory;
     function kartenVorschau(_alleVerschiedene) {
         console.log(_alleVerschiedene);
         for (let counter = 0; counter < _alleVerschiedene.length; counter++) {
-            //let countString: string = counter + "";
             let adminKarte = document.createElement("img");
             let adminKarteRahmen = document.createElement("div");
             let loeschen = document.createElement("img");

@@ -15,8 +15,6 @@ namespace Memeory {
 
         for (let counter: number = 0; counter < _alleVerschiedene.length; counter++) {
 
-            //let countString: string = counter + "";
-
             let adminKarte: HTMLImageElement = <HTMLImageElement>document.createElement("img");
             let adminKarteRahmen: HTMLDivElement = <HTMLDivElement>document.createElement("div");
             let loeschen: HTMLImageElement = <HTMLImageElement>document.createElement("img");

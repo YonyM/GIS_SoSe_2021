@@ -1,7 +1,7 @@
 "use strict";
 var Memeory;
 (function (Memeory) {
-    let url = "https://yonysgisserver.herokuapp.com/";
+    let url = "https://yonysgisserver.herokuapp.com";
     //let url: string = "http://localhost:8101/";
     let paerchenCounter;
     function warten(_ms) {
@@ -10,7 +10,7 @@ var Memeory;
     async function kartenAnfragen(_anfrage) {
         let formData = new FormData(document.forms[0]);
         let query = new URLSearchParams(formData);
-        url = url + "kartenAnfragen" + "?" + query.toString();
+        url = url + "/kartenAnfragen" + "?" + query.toString();
         let antwort = await fetch(url, { method: "get" });
         let antwortString = await antwort.text();
         let alleUnterschiedliche = await JSON.parse(antwortString);

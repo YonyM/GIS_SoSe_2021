@@ -129,7 +129,8 @@ namespace Memeory {
                         let zeitString: string = ((dateEnd.getTime() - date.getTime()) / 1000) + " Sek";
                         localStorage.setItem("zeit", zeitString);
                         localStorage.setItem("zeitEintragen", "ja");
-                        window.location.href = "/scores/scores.html";
+                        //window.location.href = "/scores/scores.html";
+                        window.open("../scores/scores.html");
                     }
                 }
                 else {

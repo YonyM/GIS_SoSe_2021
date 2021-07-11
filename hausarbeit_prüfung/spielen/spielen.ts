@@ -129,7 +129,7 @@ namespace Memeory {
                         let zeitString: string = ((dateEnd.getTime() - date.getTime()) / 1000) + " Sek";
                         localStorage.setItem("zeit", zeitString);
                         localStorage.setItem("zeitEintragen", "ja");
-                        window.location.replace("/scores/scores.html");
+                        window.location.href = "/GIS_SoSe_2021/hausarbeit_prüfung/scores/scores.html";
                     }
                 }
                 else {

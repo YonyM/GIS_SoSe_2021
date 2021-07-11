@@ -8,11 +8,9 @@ namespace Memeory {
     }
 
     let url: string = "https://yonysgisserver.herokuapp.com/"; 
-   // let url: string = "https://myfirsttestserverisnowlive.herokuapp.com/";
-    //let url: string = "http://localhost:8101/";
 
     async function zeitenAnfragen(): Promise<void> {
-        console.log(url);
+
         url = url + "zeitenAnfragen";
 
         let antwort: Response = await fetch(url, { method: "get" });
@@ -93,7 +91,6 @@ namespace Memeory {
 
     if (localStorage.getItem("zeitEintragen") == "ja") {
 
-        console.log(localStorage.getItem("zeit"));
         nameEintragen();
         localStorage.clear();
 

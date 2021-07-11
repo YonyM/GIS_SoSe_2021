@@ -9,31 +9,25 @@ namespace Memeory {
     }
 
     let url: string = "https://yonysgisserver.herokuapp.com/";
-    //let url: string = "https://yonyszweiterserver.herokuapp.com/";
-    //let url: string = "http://localhost:8101/";
 
     let paerchenCounter: number;
 
 
     function warten(_ms: number) {
+
         return new Promise(resolve => setTimeout(resolve, _ms));
     }
 
 
+    //  Karten werden vom vom Server angefragt (Server fragt DB an)  //
     export async function kartenAnfragen(_anfrage: string): Promise<void> {
 
-        let formData: FormData = new FormData(document.forms[0]);
-        let query: URLSearchParams = new URLSearchParams(<any>formData);
-
         url = url + "kartenAnfragen";
-        console.log(url);
 
         let antwort: Response = await fetch(url, { method: "get" });
         let antwortString: string = await antwort.text();
 
         let alleUnterschiedliche: Einzelkarte[] = await JSON.parse(antwortString);
-
-        console.log("das hier muss zweimal kommen");
 
         let alleKarten: Einzelkarte[] = alleUnterschiedliche.slice();
 
@@ -42,12 +36,14 @@ namespace Memeory {
             alleKarten.push(alleUnterschiedliche[counter]);
         }
 
+        //  Hier wird das Array mit allen bzw. allen unterschiedlichen Karten jeh nach Situation weitergegeben  //
         if (_anfrage == "spielen") {
 
             paerchenCounter = alleUnterschiedliche.length;
-            console.log("hier darf ich auf der adminseite nie sein");
+
             kartenAnzeigen(alleUnterschiedliche, alleKarten);
         }
+
         else if (_anfrage == "admin") {
 
             kartenVorschau(alleUnterschiedliche);
@@ -56,10 +52,11 @@ namespace Memeory {
     }
     
     let date: Date;
+
+    //  Alle Karten werden "umgedreht" angezeigt  //
     async function kartenAnzeigen(_alleUnterschiedliche: Einzelkarte[], _alleKarten: Einzelkarte[]): Promise<void> {
 
         date = new Date();
-        console.log(date.getTime());
 
         for (let counter: number = 0; counter < _alleUnterschiedliche.length * 2; counter++) {
 
@@ -83,20 +80,21 @@ namespace Memeory {
         }
     }
 
+    // wenn wir uns "auf dem Spielfeld" befinden wird die Methode karten Anfragen mit spielen gestartet  //
     if (document.getElementById("anzeigen").className == "spielfeld") {
 
-        console.log("ja sie hat childnodes");
         kartenAnfragen("spielen");
     }
 
     let bild1: HTMLImageElement = null;
     let bild2: HTMLImageElement = null;
 
+    // Angeklicktes Bild wird angezeigt  //
     async function karteUmdrehen(_click: MouseEvent): Promise<void> {
 
         let angeklicktesBild: HTMLImageElement = <HTMLImageElement>_click.currentTarget;
 
-
+        //  Test ob schon eine Karte offen liegt  //
         if (bild1 == null) {
 
             let id: string = angeklicktesBild.getAttribute("id");
@@ -105,8 +103,10 @@ namespace Memeory {
             bild1 = angeklicktesBild;
 
         }
+
         else {
 
+            // Test ob schon eine zweite Karte aufgedeckt wurde (und ob die gleiche Karte nochmal geklickt wurde) //
             if (bild2 == null && angeklicktesBild.parentElement.id != bild1.parentElement.id) {
 
                 let id: string = angeklicktesBild.getAttribute("id");
@@ -121,7 +121,6 @@ namespace Memeory {
                     bild1.remove();
                     bild2.remove();
                     paerchenCounter -= 1;
-                    console.log(paerchenCounter);
 
                     if (paerchenCounter == 0) {
 
@@ -129,10 +128,10 @@ namespace Memeory {
                         let zeitString: string = ((dateEnd.getTime() - date.getTime()) / 1000) + " Sek";
                         localStorage.setItem("zeit", zeitString);
                         localStorage.setItem("zeitEintragen", "ja");
-                        //window.location.href = "/scores/scores.html";
                         window.open("/GIS_SoSe_2021/hausarbeit_prüfung/scores/scores.html");
                     }
                 }
+
                 else {
 
                     bild1.setAttribute("src", "../testDatein/rueckseite.png");

@@ -2,10 +2,7 @@
 var Memeory;
 (function (Memeory) {
     let url = "https://yonysgisserver.herokuapp.com/";
-    // let url: string = "https://myfirsttestserverisnowlive.herokuapp.com/";
-    //let url: string = "http://localhost:8101/";
     async function zeitenAnfragen() {
-        console.log(url);
         url = url + "zeitenAnfragen";
         let antwort = await fetch(url, { method: "get" });
         let antwortString = await antwort.text();
@@ -62,7 +59,6 @@ var Memeory;
         await fetch(url);
     }
     if (localStorage.getItem("zeitEintragen") == "ja") {
-        console.log(localStorage.getItem("zeit"));
         nameEintragen();
         localStorage.clear();
     }

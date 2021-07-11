@@ -7,7 +7,6 @@ var Memeory;
         Memeory.kartenAnfragen("admin");
     }
     function kartenVorschau(_alleVerschiedene) {
-        console.log(_alleVerschiedene);
         for (let counter = 0; counter < _alleVerschiedene.length; counter++) {
             let adminKarte = document.createElement("img");
             let adminKarteRahmen = document.createElement("div");
@@ -27,8 +26,6 @@ var Memeory;
     Memeory.kartenVorschau = kartenVorschau;
     async function karteLoeschen(_click) {
         let url = "https://yonysgisserver.herokuapp.com/";
-        //let url: string = "https://yonyszweiterserver.herokuapp.com/";
-        //let url: string = "http://localhost:8101/";
         let karteLoeschen = _click.currentTarget;
         url = url + karteLoeschen.id + "?";
         location.reload();
@@ -36,8 +33,6 @@ var Memeory;
     }
     async function karteHinzufuegen() {
         let url = "https://yonysgisserver.herokuapp.com/";
-        //let url: string = "https://yonyszweiterserver.herokuapp.com/";
-        //let url: string = "http://localhost:8101/";
         let formData = new FormData(document.forms[0]);
         let query = new URLSearchParams(formData);
         url = url + "karteHinzufuegen" + "?" + query.toString();

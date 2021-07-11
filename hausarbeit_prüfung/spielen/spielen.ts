@@ -24,7 +24,7 @@ namespace Memeory {
         let formData: FormData = new FormData(document.forms[0]);
         let query: URLSearchParams = new URLSearchParams(<any>formData);
 
-        url = url + "kartenAnfragen" + "?" + query.toString();
+        url = url + "kartenAnfragen";
         console.log(url);
 
         let antwort: Response = await fetch(url, { method: "get" });

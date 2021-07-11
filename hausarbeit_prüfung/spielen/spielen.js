@@ -1,7 +1,7 @@
 "use strict";
 var Memeory;
 (function (Memeory) {
-    let url = "https://yonysgisserver.herokuapp.com/";
+    let url = "http://yonysgisserver.herokuapp.com/";
     let paerchenCounter;
     function warten(_ms) {
         return new Promise(resolve => setTimeout(resolve, _ms));
